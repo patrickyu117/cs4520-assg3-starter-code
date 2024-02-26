@@ -1,5 +1,7 @@
 package com.cs4520.assignment3.mvp
 
+import com.cs4520.assignment3.CalculatorModel
+
 class MVPPresenter(private val model: CalculatorModel) : MVPInterface.Presenter {
 
     private lateinit var view: MVPInterface.View
