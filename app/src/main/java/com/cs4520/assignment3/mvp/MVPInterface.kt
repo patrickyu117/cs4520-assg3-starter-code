@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cs4520.assignment3.CalculatorModel
 
+// MVP interface contract, for both view and presenter
 interface MVPInterface {
     interface View {
         fun showResult(result: String)

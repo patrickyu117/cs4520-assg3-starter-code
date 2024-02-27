@@ -2,6 +2,7 @@ package com.cs4520.assignment3.mvvm
 
 import androidx.lifecycle.LiveData
 
+// MVVM interface contract, for both view and view model
 interface MVVMInterface {
     interface View {
         fun showInvalidInputError()

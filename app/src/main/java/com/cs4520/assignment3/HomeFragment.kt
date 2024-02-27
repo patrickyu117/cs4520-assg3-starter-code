@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.cs4520.assignment3.databinding.FragmentHomeBinding
 
+// Home screen fragment
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
+    // Inflates the home screen view
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -21,6 +23,7 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    // Sets the MVP and MVVM buttons to navigate to their respective screens
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Makes the MVP button navigate to the MVP fragment

@@ -6,6 +6,8 @@ import com.cs4520.assignment3.databinding.ActivityMainBinding
 
 // Creates the binding object
 private lateinit var binding : ActivityMainBinding
+
+// Main Activity that hosts the fragments
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

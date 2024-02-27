@@ -9,10 +9,13 @@ import androidx.fragment.app.Fragment
 import com.cs4520.assignment3.CalculatorModel
 import com.cs4520.assignment3.databinding.FragmentMvpBinding
 
+// Class to handle the view part of the MVP
 class MVPFragment : Fragment(), MVPInterface.View {
 
     private lateinit var binding: FragmentMvpBinding
     private lateinit var presenter: MVPInterface.Presenter
+
+    // Creates the view and uses the presenter to set the view
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -25,6 +28,7 @@ class MVPFragment : Fragment(), MVPInterface.View {
         return binding.root
     }
 
+    // Uses the presenter to set the button functions
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Set add button
@@ -56,14 +60,18 @@ class MVPFragment : Fragment(), MVPInterface.View {
             )
         }
     }
+
+    // Show the result of the calculation on the screen
     override fun showResult(result: String) {
         binding.result.text = result
     }
 
+    // Show a toast message for an invalid input
     override fun showInvalidInputError() {
         Toast.makeText(requireContext(), "Invalid Input", Toast.LENGTH_SHORT).show()
     }
 
+    // Clear the input on the view
     override fun clearInputs() {
         binding.input1.text.clear()
         binding.input2.text.clear()
